@@ -3,9 +3,14 @@
 
 // Write your JavaScript code.
 
-var app = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
+new Vue({
+  el: '#twitterVue',
+  data: {
+    tweet: ''
+  },
+  computed: {
+    tweetIsEmpty: function () {
+      return this.tweet.length === 0;
     }
-})
+  }
+});
