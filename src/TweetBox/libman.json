@@ -10,6 +10,11 @@
         "vue.min.js",
         "vue.js"
       ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "tachyons@4.11.1",
+      "destination": "wwwroot/lib/tachyons/"
     }
   ]
 }
