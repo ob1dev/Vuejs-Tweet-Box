@@ -9,7 +9,8 @@ new Vue({
   el: '#twitterVue',
   data: {
     tweet: '',
-    photos: []
+    photos: [],
+    modalShowing: false
   },
   computed: {
     tweetIsOutOfRange: function () {
@@ -26,7 +27,7 @@ new Vue({
       return this.charactersRemaining <= 10;
     },
     photoHasBeenUploaded: function () {
-      return this.photos.length > 0
+      return this.photos.length > 0;
     }
   },
   methods: {
@@ -49,6 +50,18 @@ new Vue({
     },
     removePhoto: function (index) {
       this.photos.splice(index, 1);
+    },
+    hideModal: function hideModal() {
+      this.modalShowing = false;
+    },
+    showModal: function showModal() {
+      this.modalShowing = true;
+    },
+    modalEnter: function modalEnter(el, done) {
+      $.Velocity(el, 'fadeIn', { duration: 300, complete: done, display: 'flex' });
+    },
+    modalLeave: function modalLeave(el, done) {
+      $.Velocity(el, 'fadeOut', { duration: 300, complete: done });
     }
   }
 });

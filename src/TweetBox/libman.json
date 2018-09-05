@@ -15,6 +15,11 @@
       "provider": "cdnjs",
       "library": "tachyons@4.11.1",
       "destination": "wwwroot/lib/tachyons/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "velocity@1.5.2",
+      "destination": "wwwroot/lib/velocity/"
     }
   ]
 }
