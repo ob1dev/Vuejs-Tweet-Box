@@ -1,6 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* Tweet Box
+-------------------------------------------------- */
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -60,4 +64,12 @@ body {
 button[disabled] {
   cursor: not-allowed;
   opacity: .5;
+}
+
+.hide {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
